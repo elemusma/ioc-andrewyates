@@ -22,9 +22,18 @@ $title = get_sub_field('title');
 $imageIcon = get_sub_field('image_icon');
 $embed = get_sub_field('embedd_url');
 $url = get_sub_field('embedd_url', false, false);
+$link = get_sub_field('link');
 $videoCounter++;
 
 echo '<div class="col-md-4 p-1">';
+
+if( $link ): 
+$link_url = $link['url'];
+$link_title = $link['title'];
+$link_target = $link['target'] ? $link['target'] : '_self';
+echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">' . esc_html( $link_title );
+echo '<div style="pointer-events:none;">';
+endif;
 echo '<div class="position-relative videos-embed">';
 // echo '<a href="' . $url . '" data-lightbox="image-set" class="d-block">';
 echo '<div class="video-' . $videoCounter . ' open-modal small d-block" id="video-' . $videoCounter . '" style="">';
@@ -61,6 +70,12 @@ echo '</div>';
 echo '</div>';
 
 echo '</div>';
+
+if($link):
+    echo '</div>';
+    echo '</a>';
+endif;
+
 echo '</div>';
 endwhile;
 
