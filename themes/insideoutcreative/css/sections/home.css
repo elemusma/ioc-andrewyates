@@ -1,0 +1,33 @@
+.videos-embed iframe {
+    height: 205px !important;
+    width: 100%;
+}
+
+
+@media only screen and (max-width:991px) {
+    .videos-embed iframe {
+        height: 140px !important;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .videos-embed iframe {
+        height: 210px !important;
+    }
+}
+
+.modal-content iframe {
+    height: 600px !important;
+}
+
+@media only screen and (max-width:767px) {
+    .modal-content iframe {
+        height: 210px !important;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .image-intro-gallery {
+        height: 115px !important;
+    }
+}
