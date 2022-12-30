@@ -11,9 +11,9 @@ wp_enqueue_style('bootstrap', get_theme_file_uri('/css/bootstrap.min.css'));
 
 wp_enqueue_style('venobox-css', get_theme_file_uri('/venobox/venobox.min.css'));
 
-if(is_front_page()){
+// if(is_front_page()){
 	wp_enqueue_style('home', get_theme_file_uri('/css/sections/home.css'));
-}
+// }
 if(is_page_template('templates/about.php')){
 	wp_enqueue_style('about-custom', get_theme_file_uri('/css/sections/about.css'));
 	wp_enqueue_style('intro', get_theme_file_uri('/css/sections/intro.css'));

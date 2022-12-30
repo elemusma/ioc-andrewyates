@@ -50,6 +50,8 @@ echo '</section>';
    
 }
 
+echo get_template_part('partials/videos');
+
 echo get_template_part('partials/gallery');
 
 get_footer(); 
