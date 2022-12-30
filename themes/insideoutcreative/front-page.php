@@ -86,21 +86,46 @@ echo '</section>';
 // end of intro
 endif;
 
+// $gallery = get_field('gallery');
+// if( $gallery ): 
+// echo '<section class="pt-5 pb-5 position-relative">';
+// echo '<div class="container">';
+// echo '<div class="row justify-content-center">';
+
+// echo '<div class="col-12 text-center">';
+
+// // echo '<h2 class="text-accent bold">Still Photos</h2>';
+
+// echo wp_get_attachment_image(179,'full','',['class'=>'h-auto mb-4 pl-4 pr-4','style'=>'width:200px']);
+
+// echo '</div>';
+
+
+
+// foreach( $gallery as $image ):
+// echo '<div class="col-lg-3 col-md-4 col-6 col col-portfolio p-1 overflow-h">';
+// echo '<div class="position-relative img-hover w-100 overflow-h">';
+// echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set">';
+// echo wp_get_attachment_image($image['id'], 'full','',['class'=>'w-100 image-intro-gallery','style'=>'height:250px;object-fit:cover;object-position:top;']);
+// echo '</a>';
+// echo '</div>';
+
+// echo '<p class="mt-1">' . $image['alt'] . '</p>';
+
+// echo '</div>';
+// endforeach;
+// echo '</div>';
+// echo '</div>';
+// echo '</section>';
+// endif;
+
+// start of divider
 echo '<section>';
 echo '<div class="container">';
 echo '<div class="row">';
 echo '<div class="col-12">';
 echo '<hr>';
 echo '</div>';
-echo '</div>';
-echo '</div>';
-echo '</section>';
-
-$gallery = get_field('gallery');
-if( $gallery ): 
-echo '<section class="pt-5 pb-5 position-relative">';
-echo '<div class="container">';
-echo '<div class="row justify-content-center">';
 
 echo '<div class="col-12 text-center">';
 
@@ -110,24 +135,12 @@ echo wp_get_attachment_image(179,'full','',['class'=>'h-auto mb-4 pl-4 pr-4','st
 
 echo '</div>';
 
-
-
-foreach( $gallery as $image ):
-echo '<div class="col-lg-3 col-md-4 col-6 col col-portfolio p-1 overflow-h">';
-echo '<div class="position-relative img-hover w-100 overflow-h">';
-echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set">';
-echo wp_get_attachment_image($image['id'], 'full','',['class'=>'w-100 image-intro-gallery','style'=>'height:250px;object-fit:cover;object-position:top;']);
-echo '</a>';
-echo '</div>';
-
-echo '<p class="mt-1">' . $image['alt'] . '</p>';
-
-echo '</div>';
-endforeach;
 echo '</div>';
 echo '</div>';
 echo '</section>';
-endif;
+// end of divider
+
+echo get_template_part('partials/gallery');
 
 
 // how to use new image hover effect

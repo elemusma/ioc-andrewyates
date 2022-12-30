@@ -21,14 +21,14 @@
 <div class="row align-items-center justify-content-center">
 <?php 
 echo '<div class="col-md-6 d-flex flex-wrap align-items-center justify-content-center">';
-echo '<a href="/" class="bold">Home</a>';
+echo '<a href="' . home_url() . '" class="bold">Home</a>';
 echo '<a href="' . home_url() . '">';
 $logo = get_field('logo','options'); 
 if($logo){
     echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'h-auto pl-4 pr-4','style'=>'width:200px;']); 
 }
 echo '</a>';
-echo '<a href="/bio/" class="bold">On Set</a>';
+echo '<a href="' . home_url() . '/bio/" class="bold">On Set</a>';
 echo '</div>';
 ?>
 <!-- <div class="col-lg-4 col-6 desktop-hidden">

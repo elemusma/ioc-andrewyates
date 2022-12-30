@@ -50,27 +50,7 @@ echo '</section>';
    
 }
 
-$gallery = get_field('gallery');
-if( $gallery ): 
-echo '<section class="pt-5 pb-5 position-relative">';
-echo '<div class="container">';
-echo '<div class="row justify-content-center">';
-foreach( $gallery as $image ):
-echo '<div class="col-lg-3 col-md-4 col-6 col col-portfolio p-1 overflow-h">';
-echo '<div class="position-relative img-hover w-100 overflow-h">';
-echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set">';
-echo wp_get_attachment_image($image['id'], 'full','',['class'=>'w-100 image-intro-gallery','style'=>'height:250px;object-fit:cover;']);
-echo '</a>';
-
-echo '<p class="mt-1">' . $image['alt'] . '</p>';
-
-echo '</div>';
-echo '</div>';
-endforeach;
-echo '</div>';
-echo '</div>';
-echo '</section>';
-endif;
+echo get_template_part('partials/gallery');
 
 get_footer(); 
 ?>
