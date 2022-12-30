@@ -19,6 +19,7 @@ echo '</div>';
 $videoCounter = 0;
 while(have_rows('videos')): the_row();
 $title = get_sub_field('title');
+$imageIcon = get_sub_field('image_icon');
 $embed = get_sub_field('embedd_url');
 $url = get_sub_field('embedd_url', false, false);
 $videoCounter++;
@@ -32,8 +33,13 @@ echo $embed;
 echo '</div>';
 // echo '</a>';
 echo '</div>';
-if($title):
-echo '<p class=""><strong>' . $title . '</strong></p>';
+if($title || $imageIcon):
+    echo '<div class="d-flex justify-content-between align-items-center">';
+    echo '<p class="mb-0"><strong>' . $title . '</strong></p>';
+    if($imageIcon):
+    echo wp_get_attachment_image($imageIcon['id'],'full','',['class'=>'','','style'=>'height:25px;width:25px;object-fit:contain;']);
+    endif;
+    echo '</div>';
 endif;
 // echo '<span class="text-accent video-' . $videoCounter . ' open-modal small pb-4 d-block" id="video-' . $videoCounter . '" style="">View Larger</span>';
 
