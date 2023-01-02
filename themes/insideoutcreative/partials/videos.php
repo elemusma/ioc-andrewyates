@@ -28,7 +28,7 @@ if(have_rows('videos')):
     $link_url = $link['url'];
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
-    echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">' . esc_html( $link_title );
+    echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" class="text-black" style="text-decoration:none;">' . esc_html( $link_title );
     echo '<div style="pointer-events:none;">';
     endif;
     echo '<div class="position-relative videos-embed">';
@@ -41,9 +41,14 @@ if(have_rows('videos')):
     echo '</div>';
     if($title || $imageIcon):
         echo '<div class="d-flex justify-content-between align-items-center">';
-        echo '<p class="mb-0"><strong>' . $title . '</strong></p>';
+        echo '<p class="mb-0 text-black"><strong>' . $title . '</strong></p>';
         if($imageIcon):
-        echo wp_get_attachment_image($imageIcon['id'],'full','',['class'=>'','','style'=>'height:25px;width:25px;object-fit:contain;']);
+            echo '<div>';
+            // echo '<p class="mb-0 light small ml-4 text-black">' . $imageIcon . '</p>';
+            foreach( $imageIcon as $image ):
+                echo wp_get_attachment_image($image['id'],'full','',['class'=>'','','style'=>'height:25px;width:25px;object-fit:contain;']);
+            endforeach;
+            echo '</div>';
         endif;
         echo '</div>';
     endif;
