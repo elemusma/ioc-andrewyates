@@ -21,7 +21,7 @@
 <div class="row align-items-center justify-content-center">
 <?php 
 echo '<div class="col-md-6 d-flex flex-wrap align-items-center justify-content-center">';
-echo '<a href="' . home_url() . '" class="bold">Home</a>';
+echo '<a href="' . home_url() . '/solo-documentary/" class="bold">Solo Doc</a>';
 echo '<a href="' . home_url() . '">';
 $logo = get_field('logo','options'); 
 if($logo){
