@@ -24,7 +24,7 @@ if(have_rows('videos')):
     $link = get_sub_field('link');
     $videoCounter++;
     
-    echo '<div class="col-lg-4 col-md-6 p-md-1 mb-lg-2 mb-md-4">';
+    echo '<div class="col-lg-4 col-md-6 p-md-1 mb-lg-2 mb-4">';
     
     if( $link ): 
     $link_url = $link['url'];
