@@ -5,15 +5,15 @@ if(have_rows('videos')):
     echo '<div class="container">';
     echo '<div class="row">';
     // echo '<div class="col-12">';
-    echo '<div class="col-12 text-center">';
     
     // echo '<h2 class="text-accent bold">Andrew Yates Videos</h2>';
     
     if(!is_page(206)){
+        echo '<div class="col-12 text-center">';
         echo wp_get_attachment_image(178,'full','',['class'=>'h-auto mb-4 pl-4 pr-4','style'=>'width:200px']);
+        echo '</div>';
     }
     
-    echo '</div>';
     
     $videoCounter = 0;
     while(have_rows('videos')): the_row();
@@ -24,7 +24,7 @@ if(have_rows('videos')):
     $link = get_sub_field('link');
     $videoCounter++;
     
-    echo '<div class="col-md-4 p-1">';
+    echo '<div class="col-md-4 p-lg-1">';
     
     if( $link ): 
     $link_url = $link['url'];
