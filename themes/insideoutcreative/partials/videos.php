@@ -28,7 +28,7 @@ if(have_rows('videos')):
     $link_url = $link['url'];
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
-    echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" class="text-black" style="text-decoration:none;">' . esc_html( $link_title );
+    echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" class="text-black" style="">' . esc_html( $link_title );
     echo '<div style="pointer-events:none;">';
     endif;
     echo '<div class="position-relative videos-embed">';
