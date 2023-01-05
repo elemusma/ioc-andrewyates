@@ -54,7 +54,7 @@ if(is_page(206)){
     echo '<section class="pt-5 pb-5">';
 echo '<div class="container">';
 echo '<div class="row">';
-echo '<div class="col-12 p-lg-1">';
+echo '<div class="col-12 p-md-1">';
 echo wp_get_attachment_image(247,'full','',['class'=>'h-auto w-100','style'=>'']);
 echo '</div>';
 echo '</div>';
