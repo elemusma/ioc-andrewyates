@@ -52,6 +52,10 @@ echo '</section>';
 
 echo get_template_part('partials/videos');
 
+if(is_page(206)){
+    echo wp_get_attachment_image(247,'full','',['class'=>'h-auto','style'=>'width:200px;']);
+}
+
 echo get_template_part('partials/gallery');
 
 get_footer(); 

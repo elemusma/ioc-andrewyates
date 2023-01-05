@@ -9,7 +9,9 @@ if(have_rows('videos')):
     
     // echo '<h2 class="text-accent bold">Andrew Yates Videos</h2>';
     
-    echo wp_get_attachment_image(178,'full','',['class'=>'h-auto mb-4 pl-4 pr-4','style'=>'width:200px']);
+    if(!is_page(206)){
+        echo wp_get_attachment_image(178,'full','',['class'=>'h-auto mb-4 pl-4 pr-4','style'=>'width:200px']);
+    }
     
     echo '</div>';
     

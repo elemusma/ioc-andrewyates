@@ -25,7 +25,8 @@ if($gallery){
     echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set-' . $galleryCounter . '">';
     // echo '</a>';
 } else {
-    echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set-advanced">';
+    $ID = sanitize_title_with_dashes($image['alt']);
+    echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set-' . $ID . '">';
 }
 
 echo wp_get_attachment_image($image['id'], 'full','',['class'=>'w-100 image-intro-gallery','style'=>'height:250px;object-fit:cover;object-position:top;']);
